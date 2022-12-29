@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Sudoku/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Android_Sudoku/app/src/main/res/drawable/my_button_shape_1.xml" value="0.1245" />
-        <entry key="..\:/Android_Sudoku/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Android_Sudoku/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android_Sudoku/app/src/main/res/layout/activity_settings.xml" value="0.2" />
+        <entry key="..\:/Android_Sudoku/app/src/main/res/layout/settings_dropdown_item.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Android_Sudoku</string>
+    <string name="Red">Red</string>
+    <string name="Yellow">Yellow</string>
+    <string name="Green">Green</string>
+    <string name="Purple">Purple</string>
+    <string name="Blue">Blue</string>
+    <string name="Orange">Orange</string>
+    <string name="Begienner">Beginner</string>
+    <string name="Easy">Easy</string>
+    <string name="Medium">Medium</string>
+    <string name="Hard">Hard</string>
+    <string name="Master">Master</string>
+    <string name="Legend">Legend</string>
+    <string name="Shred_Prefs_Name">save_data</string>
+    <string name="shared_prefs_theme_field">theme</string>
+    <string name="shared_prefs_difficulty_field">difficulty</string>
+    <string name="shared_prefs_validity">Initialized</string>
+    <string name="shared_prefs_volume_toggle">volume_on</string>
+    <string name="shared_prefs_music_toggle">music_on</string>
 </resources>
