@@ -4,56 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SettingsActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Theme"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:hint="Theme"
-        >
+        android:hint="Theme">
+
         <AutoCompleteTextView
             android:id="@+id/Theme_Data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
-            />
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/difficulty"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:hint="Difficulty"
-        >
+        android:hint="Difficulty">
+
         <AutoCompleteTextView
             android:id="@+id/diff_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
-            />
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="4dp"
-        >
-        <Button
-            android:layout_marginEnd="4dp"
+        android:padding="4dp">
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Toggle Sounds"
-            android:layout_weight="1"/>
         <Button
-            android:layout_marginStart="4dp"
+            android:id="@+id/volume_toggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Toggle Music"
-            android:layout_weight="1"/>
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="Toggle Sounds" />
+
+        <Button
+            android:id="@+id/music_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="Toggle Music" />
     </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restore Defaults"
+        android:id="@+id/Defaults"
+        android:layout_margin="16dp"
+        />
 
 </LinearLayout>

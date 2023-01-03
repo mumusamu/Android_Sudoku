@@ -3,6 +3,7 @@ package com.example.android_sudoku
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import com.example.android_sudoku.databinding.ActivityMainBinding
@@ -18,19 +19,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         //set up a shared preferences file if it doesnt exist already
         var Shared_Prefs = getSharedPreferences(getString(R.string.Shred_Prefs_Name), MODE_PRIVATE)
-        if(!Shared_Prefs.getBoolean(getString(R.string.shared_prefs_validity),false)){
+        if(!Shared_Prefs.contains(getString(R.string.shared_prefs_validity))){
             Toast.makeText(this
                 ,Shared_Prefs.getBoolean(getString(R.string.shared_prefs_validity),false).toString()
                 ,Toast.LENGTH_SHORT).show()
             Set_Up_Shared_Prefs()
         }
-        else{
-            Shared_Prefs.getString(getString(R.string.shared_prefs_theme_field),getString(R.string.Red))
-            Shared_Prefs.getInt(getString(R.string.shared_prefs_difficulty_field),1)
-            Shared_Prefs.getBoolean(getString(R.string.shared_prefs_volume_toggle), true)
-            Shared_Prefs.getBoolean(getString(R.string.shared_prefs_music_toggle), true)
-        }
-
+       else{
+            Toast.makeText(this
+                ,"Shared prefs file exists"
+                ,Toast.LENGTH_SHORT).show()
+       }
 
 
         // add a little mascot animation later (might cancel) # check sticky note ?
@@ -69,6 +68,11 @@ class MainActivity : AppCompatActivity() {
         editor.putBoolean(getString(R.string.shared_prefs_volume_toggle),true)
         editor.putBoolean(getString(R.string.shared_prefs_music_toggle),true)
         editor.commit()
+        Log.d("initialized", Shared_Prefs.getBoolean(getString(R.string.shared_prefs_validity),false).toString())
+        Log.d("Theme", Shared_Prefs.getString(getString(R.string.shared_prefs_theme_field),"none").toString())
+        Log.d("Difficulty", Shared_Prefs.getString(getString(R.string.shared_prefs_difficulty_field),"null").toString())
+        Log.d("Volume", Shared_Prefs.getBoolean(getString(R.string.shared_prefs_volume_toggle),false).toString())
+        Log.d("Music", Shared_Prefs.getBoolean(getString(R.string.shared_prefs_music_toggle),false).toString())
 
     }
 
