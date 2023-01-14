@@ -68,11 +68,7 @@ class MainActivity : AppCompatActivity() {
         editor.putBoolean(getString(R.string.shared_prefs_volume_toggle),true)
         editor.putBoolean(getString(R.string.shared_prefs_music_toggle),true)
         editor.commit()
-        Log.d("initialized", Shared_Prefs.getBoolean(getString(R.string.shared_prefs_validity),false).toString())
-        Log.d("Theme", Shared_Prefs.getString(getString(R.string.shared_prefs_theme_field),"none").toString())
-        Log.d("Difficulty", Shared_Prefs.getString(getString(R.string.shared_prefs_difficulty_field),"null").toString())
-        Log.d("Volume", Shared_Prefs.getBoolean(getString(R.string.shared_prefs_volume_toggle),false).toString())
-        Log.d("Music", Shared_Prefs.getBoolean(getString(R.string.shared_prefs_music_toggle),false).toString())
+
 
     }
 
